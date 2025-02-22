@@ -1,0 +1,276 @@
+{\rtf1\ansi\ansicpg1251\cocoartf2818
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 /* \uc0\u1054 \u1073 \u1097 \u1080 \u1077  \u1089 \u1090 \u1080 \u1083 \u1080  */\
+:root \{\
+  --primary-color: #6d28d9;\
+  --secondary-color: #8b5cf6;\
+  --background-light: #f9fafb;\
+  --background-dark: #1e1e2f;\
+  --text-light: #374151;\
+  --text-dark: #f3f4f6;\
+  --glass-bg: rgba(255, 255, 255, 0.1);\
+  --glass-border: rgba(255, 255, 255, 0.2);\
+  --shadow: 0 8px 32px rgba(0, 0, 0, 0.1);\
+  --transition: all 0.3s ease;\
+\}\
+\
+body \{\
+  font-family: 'Inter', sans-serif;\
+  background-color: var(--background-light);\
+  color: var(--text-light);\
+  margin: 0;\
+  padding: 0;\
+  transition: var(--transition);\
+\}\
+\
+body.dark-mode \{\
+  background-color: var(--background-dark);\
+  color: var(--text-dark);\
+\}\
+\
+.hidden \{\
+  display: none;\
+\}\
+\
+/* \uc0\u1057 \u1090 \u1080 \u1083 \u1080  \u1076 \u1083 \u1103  \u1101 \u1082 \u1088 \u1072 \u1085 \u1072  \u1074 \u1093 \u1086 \u1076 \u1072  */\
+.login-screen \{\
+  display: flex;\
+  justify-content: center;\
+  align-items: center;\
+  height: 100vh;\
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));\
+\}\
+\
+.login-container \{\
+  background: var(--glass-bg);\
+  backdrop-filter: blur(10px);\
+  border: 1px solid var(--glass-border);\
+  padding: 40px;\
+  border-radius: 16px;\
+  box-shadow: var(--shadow);\
+  text-align: center;\
+  width: 100%;\
+  max-width: 400px;\
+\}\
+\
+.login-container h1 \{\
+  color: #fff;\
+  font-size: 2rem;\
+  margin-bottom: 10px;\
+\}\
+\
+.login-container p \{\
+  color: rgba(255, 255, 255, 0.8);\
+  font-size: 1rem;\
+  margin-bottom: 20px;\
+\}\
+\
+#passwordInput \{\
+  width: 100%;\
+  padding: 10px;\
+  border: 1px solid var(--glass-border);\
+  border-radius: 8px;\
+  background: var(--glass-bg);\
+  color: #fff;\
+  margin-bottom: 20px;\
+  transition: var(--transition);\
+\}\
+\
+#passwordInput::placeholder \{\
+  color: rgba(255, 255, 255, 0.6);\
+\}\
+\
+#loginBtn \{\
+  background: #fff;\
+  color: var(--primary-color);\
+  border: none;\
+  padding: 10px 20px;\
+  border-radius: 8px;\
+  cursor: pointer;\
+  transition: var(--transition);\
+  width: 100%;\
+\}\
+\
+#loginBtn:hover \{\
+  background: var(--primary-color);\
+  color: #fff;\
+  transform: translateY(-2px);\
+  box-shadow: 0 4px 12px rgba(109, 40, 217, 0.3);\
+\}\
+\
+.error-message \{\
+  color: #ff4d4d;\
+  margin-top: 10px;\
+  font-size: 0.9rem;\
+\}\
+\
+/* \uc0\u1054 \u1089 \u1085 \u1086 \u1074 \u1085 \u1086 \u1081  \u1082 \u1086 \u1085 \u1090 \u1077 \u1085 \u1090  */\
+.container \{\
+  max-width: 1200px;\
+  margin: 0 auto;\
+  padding: 20px;\
+\}\
+\
+header \{\
+  text-align: center;\
+  margin-bottom: 40px;\
+\}\
+\
+header h1 \{\
+  color: var(--primary-color);\
+  font-size: 2.5rem;\
+  margin: 0;\
+  font-weight: 700;\
+\}\
+\
+header p \{\
+  color: var(--text-light);\
+  font-size: 1.2rem;\
+\}\
+\
+body.dark-mode header p \{\
+  color: var(--text-dark);\
+\}\
+\
+/* \uc0\u1057 \u1090 \u1080 \u1083 \u1080  \u1076 \u1083 \u1103  \u1079 \u1072 \u1076 \u1072 \u1095  */\
+.task-manager \{\
+  background: var(--glass-bg);\
+  backdrop-filter: blur(10px);\
+  border: 1px solid var(--glass-border);\
+  padding: 20px;\
+  border-radius: 16px;\
+  box-shadow: var(--shadow);\
+  margin-bottom: 20px;\
+\}\
+\
+.task-input \{\
+  display: flex;\
+  gap: 10px;\
+  margin-bottom: 20px;\
+\}\
+\
+#taskInput, #taskDate \{\
+  width: 100%;\
+  padding: 10px;\
+  border: 1px solid var(--glass-border);\
+  border-radius: 8px;\
+  background: var(--glass-bg);\
+  color: var(--text-light);\
+  transition: var(--transition);\
+\}\
+\
+body.dark-mode #taskInput,\
+body.dark-mode #taskDate \{\
+  color: var(--text-dark);\
+\}\
+\
+#addTaskBtn \{\
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));\
+  color: #fff;\
+  border: none;\
+  padding: 10px 20px;\
+  border-radius: 8px;\
+  cursor: pointer;\
+  transition: var(--transition);\
+\}\
+\
+#addTaskBtn:hover \{\
+  transform: translateY(-2px);\
+  box-shadow: 0 4px 12px rgba(109, 40, 217, 0.3);\
+\}\
+\
+.task-filters \{\
+  display: flex;\
+  gap: 10px;\
+  margin-bottom: 20px;\
+\}\
+\
+.task-filters button \{\
+  background: var(--glass-bg);\
+  border: 1px solid var(--glass-border);\
+  padding: 5px 10px;\
+  border-radius: 8px;\
+  cursor: pointer;\
+  transition: var(--transition);\
+  color: var(--text-light);\
+\}\
+\
+body.dark-mode .task-filters button \{\
+  color: var(--text-dark);\
+\}\
+\
+.task-filters button:hover \{\
+  background: var(--primary-color);\
+  color: #fff;\
+\}\
+\
+#taskList \{\
+  list-style-type: none;\
+  padding: 0;\
+\}\
+\
+#taskList li \{\
+  background: var(--glass-bg);\
+  backdrop-filter: blur(10px);\
+  border: 1px solid var(--glass-border);\
+  padding: 10px;\
+  border-radius: 8px;\
+  margin-bottom: 5px;\
+  display: flex;\
+  justify-content: space-between;\
+  align-items: center;\
+  transition: var(--transition);\
+\}\
+\
+#taskList li.completed \{\
+  text-decoration: line-through;\
+  opacity: 0.7;\
+\}\
+\
+#taskList li button \{\
+  background: none;\
+  border: none;\
+  color: #ff4d4d;\
+  cursor: pointer;\
+  font-size: 1rem;\
+  transition: var(--transition);\
+\}\
+\
+#taskList li button:hover \{\
+  transform: scale(1.1);\
+\}\
+\
+/* \uc0\u1057 \u1090 \u1080 \u1083 \u1080  \u1076 \u1083 \u1103  \u1082 \u1072 \u1083 \u1077 \u1085 \u1076 \u1072 \u1088 \u1103  */\
+.calendar-section \{\
+  background: var(--glass-bg);\
+  backdrop-filter: blur(10px);\
+  border: 1px solid var(--glass-border);\
+  padding: 20px;\
+  border-radius: 16px;\
+  box-shadow: var(--shadow);\
+  margin-bottom: 20px;\
+\}\
+\
+#calendar \{\
+  margin-top: 20px;\
+\}\
+\
+/* \uc0\u1052 \u1086 \u1073 \u1080 \u1083 \u1100 \u1085 \u1072 \u1103  \u1074 \u1077 \u1088 \u1089 \u1080 \u1103  */\
+@media (max-width: 768px) \{\
+  .container \{\
+    padding: 10px;\
+  \}\
+\
+  .task-input \{\
+    flex-direction: column;\
+  \}\
+\
+  .task-filters \{\
+    flex-direction: column;\
+  \}\
+\}}
